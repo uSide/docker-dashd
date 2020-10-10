@@ -1,8 +1,8 @@
 FROM debian:stable-slim
 
-ENV DASH_VERSION=0.15.0
-ENV DASH_MINOR_VERSION=0
-ENV DASH_CHECKSUM=4cc0815ebd595f3d0134a8df9e6224cbe3d79398a5a899b60ca5f4ab8a576160
+ENV DASH_VERSION=0.16.0
+ENV DASH_MINOR_VERSION=1
+ENV DASH_CHECKSUM=d1cfa14ee614872d21956f4fc6648969049a9354cf638efcf69916c0b6465346
 
 RUN apt-get update && apt-get install -y wget && apt-get clean
 RUN wget https://github.com/dashpay/dash/releases/download/v${DASH_VERSION}.${DASH_MINOR_VERSION}/dashcore-${DASH_VERSION}.${DASH_MINOR_VERSION}-x86_64-linux-gnu.tar.gz \
